@@ -6,26 +6,17 @@ import java.util.Scanner;
 
 public class SearchMain {
 	public static void main(String[] args) {
-		// 객체 생성
 		Scanner sc = new Scanner(System.in);
-		Member member = new Member();
-		SearchService ss = new SearchService();
-		
-	
-		
+		SearchService sv = new SearchService();// 기본생성자 실행
 		do {
-			System.out.println("검색할 회원 이름을 입력하세요");
-			
-			//입력
-			String name = sc.next();
-			boolean result = ss.searchMember(name);
-			
-			if(!result) {
-				
-				System.out.println("해당 회원이 없습니다");
-			}break;
-			
-		}while(true);
-//		sc.close();
+			System.out.println("검색할 회원이름을 입력하세요?");
+			String name = sc.next();// 홍길동
+			boolean searchResult = sv.searchMember(name);// true
+			if (searchResult)
+				break;
+			System.out.println("해당 회원이 없습니다.");
+		} while (true);
+		sc.close();
 	}
+
 }

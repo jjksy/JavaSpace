@@ -8,6 +8,10 @@ public class Member {
 	int weight;
 	String nation;
 
+	public Member(String string, int i, int j, String string2) {
+		// TODO Auto-generated constructor stub
+	}
+
 	public String getName() {
 		return name;
 	}
