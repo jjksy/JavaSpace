@@ -12,19 +12,29 @@ class Sawon2 {
 		this.dept = dept;
 		this.salary = salary;
 	}
+
 	String displayInfo() {
-		return name + dept + salary;
+		return "이름 : "+ name + ", 부서 : " + dept + ", 연봉:" + salary;
 	}
 
 }
-class Sales2 extends Sawon2{
 
-	public Sales2(String name, String dept, int salary) {
+class Sales2 extends Sawon2 {
+	int commition;
+
+	public Sales2(String name, String dept, int salary, int commition) {
 		super(name, dept, salary);
 	}
-	
+	String displayInfo() {
+		return super.displayInfo() + ", 수당 : " + commition;
+	}
+
 }
 
 public class SuperConstructorTest {
+	public static void main(String[] args) {
+		Sales2 sales2 = new Sales2(null, null, 0, 0);
+		System.out.println(sales2.displayInfo());
+	}
 
 }
