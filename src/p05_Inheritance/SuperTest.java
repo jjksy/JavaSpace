@@ -25,7 +25,6 @@ class Sawon {
 class Sales extends Sawon {
 	public Sales(String name, String dept, int salary) {
 		super(name, dept, salary);
-		// TODO Auto-generated constructor stub
 	}
 
 	int commition;
