@@ -8,26 +8,38 @@ class Sawon {
 	String dept;
 	int salary;
 
+	public Sawon(String name, String dept, int salary) {
+		super();
+		this.name = name;
+		this.dept = dept;
+		this.salary = salary;
+	}
+
 	String displayInfo() {
-		//여기 작성
+		
+		return name + dept + salary;
+		
 	}
 }
 
 class Sales extends Sawon {
+	public Sales(String name, String dept, int salary) {
+		super(name, dept, salary);
+		// TODO Auto-generated constructor stub
+	}
+
 	int commition;
 
 	/*
 	 * String displayInfo() { return "이름: " + name + ", 부서 :" + dept + ", 연봉 :" +
 	 * salary + ", commition = " + commition; }
 	 */
-	String displayInfo() {
-		//여기 작성
-	}
+
 }
 
 public class SuperTest {
 	public static void main(String[] args) {
-		Sales sales = new Sales();
+		Sales sales = new Sales(null, null, 0);
 		System.out.println(sales.displayInfo());
 	}
 }
