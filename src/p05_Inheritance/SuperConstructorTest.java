@@ -8,9 +8,9 @@ class Sawon2 {
 
 	public Sawon2(String name, String dept, int salary) {
 		super();
-		this.name = name;
-		this.dept = dept;
-		this.salary = salary;
+		this.name = "James";
+		this.dept = "개발팀";
+		this.salary = 30000000;
 	}
 
 	String displayInfo() {
@@ -20,7 +20,7 @@ class Sawon2 {
 }
 
 class Sales2 extends Sawon2 {
-	int commition;
+	int commition = 7000000;
 
 	public Sales2(String name, String dept, int salary, int commition) {
 		super(name, dept, salary);
